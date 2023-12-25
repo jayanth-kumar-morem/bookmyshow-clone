@@ -6,7 +6,8 @@
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx",
-    "./navbar": "./src/navbar.tsx"
+    "./navbar": "./src/navbar.tsx",
+    "./carousel": "./src/carousel.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -25,9 +26,11 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.33",
     "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.0"
   },
   "files": [

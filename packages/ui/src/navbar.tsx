@@ -4,7 +4,7 @@ export function Navbar(): JSX.Element {
   return (
     <>
       <nav className="justify-between flex place-content-evenly flex-row w-full pl-8 pr-8 pt-3 pb-3 h-16 items-center">
-        <div className="left flex">
+        <div className="left flex p-10">
           <div className="wrapper flex flex-row">
             <div className="logo self-center">
               <img src="/appIcon.svg" />
