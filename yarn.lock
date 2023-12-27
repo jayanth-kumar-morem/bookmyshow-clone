@@ -3649,6 +3649,11 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-magic-slider-dots@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-magic-slider-dots/-/react-magic-slider-dots-1.2.2.tgz#9e37b424ca0058374dc97b56e4064da48a5244da"
+  integrity sha512-I2ZhKcQLJ4QG11AyJwRhKprl4lWa1I1FkJzvMDr26dypqIoe4WwqH/stWyROetgqw5jqslb1ocePp8STfQ0tPQ==
+
 react-slick@^0.29.0:
   version "0.29.0"
   resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.29.0.tgz#0bed5ea42bf75a23d40c0259b828ed27627b51bb"

@@ -2,21 +2,20 @@
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./carousel.css";
 
 interface CarouselProps {
-  items: string[];
+  items: JSX.Element[];
   settings: Settings;
 }
 
-function Carousel({ items, settings }: CarouselProps) {
+export function Carousel({ items, settings }: CarouselProps) {
   return (
     <div className="">
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index}>
-            <img
-              src={item}
-            />
+            {item}
           </div>
         ))}
       </Slider>
@@ -25,11 +24,11 @@ function Carousel({ items, settings }: CarouselProps) {
 }
 
 export function BannerCarousel() {
-  const items: string[] = [
-    "https://assets-in.bmscdn.com/promotions/cms/creatives/1704456008868_offeroftheweekweb.jpg",
-    "https://assets-in.bmscdn.com/promotions/cms/creatives/1703933140485_web.jpg",
-    "https://assets-in.bmscdn.com/promotions/cms/creatives/1704456008868_offeroftheweekweb.jpg",
-    "https://assets-in.bmscdn.com/promotions/cms/creatives/1703933140485_web.jpg",
+  const items: JSX.Element[] = [
+    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704527478295_malharmelaweb.jpg"/>,
+    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704267698878_vasavidesk.jpg"/>,
+    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704456008868_offeroftheweekweb.jpg"/>,
+    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1703933140485_web.jpg"/>,
   ];
 
   const settings: Settings = {
