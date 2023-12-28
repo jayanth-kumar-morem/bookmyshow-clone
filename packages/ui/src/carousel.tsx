@@ -25,10 +25,10 @@ export function Carousel({ items, settings }: CarouselProps) {
 
 export function BannerCarousel() {
   const items: JSX.Element[] = [
-    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704527478295_malharmelaweb.jpg"/>,
-    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704267698878_vasavidesk.jpg"/>,
-    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704456008868_offeroftheweekweb.jpg"/>,
-    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1703933140485_web.jpg"/>,
+    <img className="m-auto" src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704527478295_malharmelaweb.jpg"/>,
+    <img className="m-auto" src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704267698878_vasavidesk.jpg"/>,
+    <img className="m-auto" src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704456008868_offeroftheweekweb.jpg"/>,
+    <img className="m-auto" src="https://assets-in.bmscdn.com/promotions/cms/creatives/1703933140485_web.jpg"/>,
   ];
 
   const settings: Settings = {
@@ -41,7 +41,7 @@ export function BannerCarousel() {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 650,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1700,
   };
 

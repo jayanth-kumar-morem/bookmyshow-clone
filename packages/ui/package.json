@@ -8,7 +8,8 @@
     "./code": "./src/code.tsx",
     "./navbar": "./src/navbar.tsx",
     "./carousel": "./src/carousel.tsx",
-    "./moviesRow": "./src/moviesRow.tsx"
+    "./moviesRow": "./src/moviesRow.tsx",
+    "./promotionBanner": "./src/promotionBanner.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
