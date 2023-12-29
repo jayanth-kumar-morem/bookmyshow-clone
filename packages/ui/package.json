@@ -9,7 +9,8 @@
     "./navbar": "./src/navbar.tsx",
     "./carousel": "./src/carousel.tsx",
     "./moviesRow": "./src/moviesRow.tsx",
-    "./promotionBanner": "./src/promotionBanner.tsx"
+    "./promotionBanner": "./src/promotionBanner.tsx",
+    "./showKindChooser": "./src/showKindChooser.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

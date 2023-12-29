@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "./button";
 import { Carousel } from "./carousel";
 
 export function MoviesRow() {
@@ -15,7 +14,7 @@ export function MoviesRow() {
   movies = [...movies, ...movies, ...movies, ...movies, ...movies, ...movies]
   return (
     <div className="movies-row mt-14">
-      <div className="wrapper flex flex-col px-20">
+      <div className="wrapper flex flex-col px-60">
         <div className="title-see-all-btn-wrapper flex flex-row place-content-between">
             <h2 className="leading-8 font-semibold text-xl">Recommended</h2>
             <button className="text-red-500 text-l">See All &gt;</button>
@@ -45,7 +44,7 @@ function MovieCard({ movie }: { movie: any }) {
   return (
     <a className="movie-card flex flex-col pr-5" href="#">
       <div className="poster">
-        <img className="border rounded-xl" src={movie.poster} />
+        <img className="border rounded-xl object-contain h-80" src={movie.poster} />
       </div>
       <div className="movie-details">
         <h3 className="font-medium text-base pt-1">{movie.title}</h3>

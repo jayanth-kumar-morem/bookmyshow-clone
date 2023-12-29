@@ -39,6 +39,7 @@ export function BannerCarousel() {
     pauseOnHover: true,
     pauseOnFocus: true,
     slidesToShow: 1,
+    centerPadding: "60px",
     slidesToScroll: 1,
     speed: 650,
     autoplay: false,
