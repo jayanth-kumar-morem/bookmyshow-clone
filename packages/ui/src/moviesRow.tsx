@@ -14,10 +14,10 @@ export function MoviesRow() {
   movies = [...movies, ...movies, ...movies, ...movies, ...movies, ...movies]
   return (
     <div className="movies-row mt-14">
-      <div className="wrapper flex flex-col px-60">
-        <div className="title-see-all-btn-wrapper flex flex-row place-content-between">
+      <div className="wrapper flex flex-col px-40">
+        <div className="title-see-all-btn-wrapper flex flex-row place-content-between mb-2">
             <h2 className="leading-8 font-semibold text-xl">Recommended</h2>
-            <button className="text-red-500 text-l">See All &gt;</button>
+            <button className="text-red-500 text-sm">See All &gt;</button>
         </div>
         <Carousel
           items={movies.map((movie, index) => (
@@ -42,9 +42,9 @@ export function MoviesRow() {
 
 function MovieCard({ movie }: { movie: any }) {
   return (
-    <a className="movie-card flex flex-col pr-5" href="#">
+    <a className="movie-card flex flex-col pr-6" href="#">
       <div className="poster">
-        <img className="border rounded-xl object-contain h-80" src={movie.poster} />
+        <img className="border rounded-xl" src={movie.poster} />
       </div>
       <div className="movie-details">
         <h3 className="font-medium text-base pt-1">{movie.title}</h3>
