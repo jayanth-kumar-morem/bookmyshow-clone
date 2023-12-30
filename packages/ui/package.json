@@ -13,7 +13,8 @@
     "./showKindChooser": "./src/showKindChooser.tsx",
     "./title": "./src/title.tsx",
     "./ticketOptions": "./src/ticketOptions.tsx",
-    "./theatresAvailabilityComponent": "./src/theatresAvailabilityComponent.tsx"
+    "./theatresAvailabilityComponent": "./src/theatresAvailabilityComponent.tsx",
+    "./seatLayoutHeader": "./src/seatLayoutHeader.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
