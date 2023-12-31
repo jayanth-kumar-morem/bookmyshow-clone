@@ -39,3 +39,4 @@ yarn-error.log*
 
 *package-lock.json
 tailwind.config.js
+notes.md
