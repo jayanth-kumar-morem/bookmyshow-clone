@@ -1,16 +1,16 @@
-"use client";
-import * as React from "react";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
-import { red } from "@mui/material/colors";
-import FormControl from "@mui/material/FormControl";
-import ListItemText from "@mui/material/ListItemText";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import Checkbox from "@mui/material/Checkbox";
-import { InputLabel } from "@mui/material";
+'use client'
+import * as React from 'react'
+import OutlinedInput from '@mui/material/OutlinedInput'
+import MenuItem from '@mui/material/MenuItem'
+import { red } from '@mui/material/colors'
+import FormControl from '@mui/material/FormControl'
+import ListItemText from '@mui/material/ListItemText'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import Checkbox from '@mui/material/Checkbox'
+import { InputLabel } from '@mui/material'
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
+const ITEM_HEIGHT = 48
+const ITEM_PADDING_TOP = 8
 const MenuProps = {
   PaperProps: {
     // style: {
@@ -18,33 +18,33 @@ const MenuProps = {
     //   width: 250,
     // },
   },
-};
+}
 
 const names = [
-  "Oliver Hansen",
-  "Van Henry",
-  "April Tucker",
-  "Ralph Hubbard",
-  "Omar Alexander",
-  "Carlos Abbott",
-  "Miriam Wagner",
-  "Bradley Wilkerson",
-  "Virginia Andrews",
-  "Kelly Snyder",
-];
+  'Oliver Hansen',
+  'Van Henry',
+  'April Tucker',
+  'Ralph Hubbard',
+  'Omar Alexander',
+  'Carlos Abbott',
+  'Miriam Wagner',
+  'Bradley Wilkerson',
+  'Virginia Andrews',
+  'Kelly Snyder',
+]
 
 export default function MultiSelectDropdown() {
-  const [personName, setPersonName] = React.useState<string[]>([]);
+  const [personName, setPersonName] = React.useState<string[]>([])
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
     const {
       target: { value },
-    } = event;
+    } = event
     setPersonName(
       // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
-  };
+      typeof value === 'string' ? value.split(',') : value
+    )
+  }
 
   return (
     <div>
@@ -52,8 +52,8 @@ export default function MultiSelectDropdown() {
         sx={{
           m: 1,
           width: 300,
-          "&.MuiFormControl-root": {
-            maxWidth: "10rem",
+          '&.MuiFormControl-root': {
+            maxWidth: '10rem',
           },
         }}
       >
@@ -75,14 +75,14 @@ export default function MultiSelectDropdown() {
               className="text-xs font-semibold text-slate-400"
             />
           }
-          renderValue={(selected) => selected.join(", ")}
+          renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
           sx={{
-            "&.MuiInputLabel-root": {
+            '&.MuiInputLabel-root': {
               color: red[500],
             },
             fieldset: {
-              border: "0px",
+              border: '0px',
             },
           }}
         >
@@ -92,25 +92,25 @@ export default function MultiSelectDropdown() {
               key={name}
               value={name}
               sx={{
-                "&.MuiMenuItem-root": {
-                  padding: "0px",
+                '&.MuiMenuItem-root': {
+                  padding: '0px',
                 },
               }}
             >
               <Checkbox
                 checked={personName.indexOf(name) > -1}
                 sx={{
-                  "&.Mui-checked": {
+                  '&.Mui-checked': {
                     color: red[500],
                   },
-                  "& .MuiSvgIcon-root": { fontSize: 16 },
+                  '& .MuiSvgIcon-root': { fontSize: 16 },
                 }}
               />
               <ListItemText
                 primary={name}
                 sx={{
-                  "& .MuiTypography-root": {
-                    fontSize: "0.8rem",
+                  '& .MuiTypography-root': {
+                    fontSize: '0.8rem',
                   },
                 }}
               />
@@ -119,5 +119,5 @@ export default function MultiSelectDropdown() {
         </Select>
       </FormControl>
     </div>
-  );
+  )
 }

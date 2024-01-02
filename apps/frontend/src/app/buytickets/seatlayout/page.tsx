@@ -1,6 +1,9 @@
-import { SeatLayoutHeader } from "@repo/ui/seatLayoutHeader";
-import { ShowTimeChooser } from "@repo/ui/showTimeChooser";
-import { SeatingRepresentation, SeatingRepresentationHelpFooter } from "@repo/ui/seatingRepresentation";
+import { SeatLayoutHeader } from '@repo/ui/seatLayoutHeader'
+import { ShowTimeChooser } from '@repo/ui/showTimeChooser'
+import {
+  SeatingRepresentation,
+  SeatingRepresentationHelpFooter,
+} from '@repo/ui/seatingRepresentation'
 
 export default function SeatLayout() {
   return (
@@ -10,5 +13,5 @@ export default function SeatLayout() {
       <SeatingRepresentation />
       <SeatingRepresentationHelpFooter />
     </>
-  );
+  )
 }

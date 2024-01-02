@@ -9,9 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
-        bmsGreen: "#2dc492",
-        bmsGrayBg: "#f5f5fa",
+      colors: {
+        bmsGreen: '#2dc492',
+        bmsGrayBg: '#f5f5fa',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

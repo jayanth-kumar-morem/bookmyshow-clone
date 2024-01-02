@@ -6,18 +6,20 @@ export function Title() {
           Salaar
         </a>
         <div className="tags mt-3 flex flex-row">
-          {["UA","Action", "Adventure", "Fantasy", "Sci-Fi"].map((tag, index) => {
-            return (
-              <span
-                className="text-slate-500 text-xs uppercase px-2 mr-2 border border-solid border-stone-500 rounded-full"
-                key={index}
-              >
-                {tag}
-              </span>
-            );
-          })}
+          {['UA', 'Action', 'Adventure', 'Fantasy', 'Sci-Fi'].map(
+            (tag, index) => {
+              return (
+                <span
+                  className="text-slate-500 text-xs uppercase px-2 mr-2 border border-solid border-stone-500 rounded-full"
+                  key={index}
+                >
+                  {tag}
+                </span>
+              )
+            }
+          )}
         </div>
       </div>
     </div>
-  );
+  )
 }

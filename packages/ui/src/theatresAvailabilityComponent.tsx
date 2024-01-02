@@ -1,8 +1,8 @@
-import { grey } from "@mui/material/colors";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import PhonelinkRingOutlinedIcon from "@mui/icons-material/PhonelinkRingOutlined";
-import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
-import "./theatresAvailabilityComponent.css";
+import { grey } from '@mui/material/colors'
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
+import PhonelinkRingOutlinedIcon from '@mui/icons-material/PhonelinkRingOutlined'
+import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined'
+import './theatresAvailabilityComponent.css'
 
 function SeatPrices() {
   return (
@@ -12,14 +12,14 @@ function SeatPrices() {
         <span
           className="text-xs font-light mt-1"
           style={{
-            fontSize: "10px",
+            fontSize: '10px',
           }}
         >
           CLUB
         </span>
         <span
           style={{
-            fontSize: "10px",
+            fontSize: '10px',
           }}
           className="text-xs mt-1 text-green-500"
         >
@@ -27,7 +27,7 @@ function SeatPrices() {
         </span>
       </div>
     </div>
-  );
+  )
 }
 
 function ShowTimeBox() {
@@ -37,9 +37,9 @@ function ShowTimeBox() {
         id="seat-details"
         className="seat-details absolute hidden bg-white border border-solid border-gray-300 p-4  text-sm group-hover:block w-max shadow-2xl"
         style={{
-          bottom: "calc(100% + 20px)",
-          left: "50%",
-          transform: "translateX(-55%)",
+          bottom: 'calc(100% + 20px)',
+          left: '50%',
+          transform: 'translateX(-55%)',
         }}
       >
         <div className="wrapper flex flex-row">
@@ -54,7 +54,7 @@ function ShowTimeBox() {
         06:20 PM
       </a>
     </div>
-  );
+  )
 }
 
 function SingleTheatreAvailabilityComponent() {
@@ -68,7 +68,7 @@ function SingleTheatreAvailabilityComponent() {
           <FavoriteBorderOutlinedIcon
             fontSize="small"
             sx={{
-              stroke: "#ffffff",
+              stroke: '#ffffff',
               strokeWidth: 1.5,
             }}
           />
@@ -86,7 +86,7 @@ function SingleTheatreAvailabilityComponent() {
               />
               <span
                 className="font-base"
-                style={{ fontSize: "10px", color: grey[500] }}
+                style={{ fontSize: '10px', color: grey[500] }}
               >
                 INFO
               </span>
@@ -97,7 +97,7 @@ function SingleTheatreAvailabilityComponent() {
               <PhonelinkRingOutlinedIcon
                 className="text-green-400 text-xs w-5 h-5"
                 sx={{
-                  stroke: "#ffffff",
+                  stroke: '#ffffff',
                   strokeWidth: 0.9,
                 }}
               />
@@ -108,13 +108,13 @@ function SingleTheatreAvailabilityComponent() {
             <div id="food-beverage" className="flex flex-row  items-center">
               <FastfoodOutlinedIcon
                 className="text-xs w-5 h-5"
-                style={{ color: "#ffa426" }}
+                style={{ color: '#ffa426' }}
                 sx={{
-                  stroke: "#ffffff",
+                  stroke: '#ffffff',
                   strokeWidth: 0.9,
                 }}
               />
-              <span className="text-xs font-light" style={{ color: "#ffa426" }}>
+              <span className="text-xs font-light" style={{ color: '#ffa426' }}>
                 Food & Beverage
               </span>
             </div>
@@ -152,7 +152,7 @@ function SingleTheatreAvailabilityComponent() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export function TheatresAvailabilityComponent() {
@@ -161,14 +161,14 @@ export function TheatresAvailabilityComponent() {
       id="theatres-availability"
       className="mt-4 border"
       style={{
-        backgroundColor: "#f5f5f5",
+        backgroundColor: '#f5f5f5',
       }}
     >
       <div
         id="wrapper"
         className="mx-20 mt-4 flex flex-col border border-solid border-gray-300"
         style={{
-          backgroundColor: "#ffffff",
+          backgroundColor: '#ffffff',
         }}
       >
         <div id="icons-help" className="flex flex-row self-end h-10">
@@ -202,5 +202,5 @@ export function TheatresAvailabilityComponent() {
         <SingleTheatreAvailabilityComponent />
       </div>
     </div>
-  );
+  )
 }

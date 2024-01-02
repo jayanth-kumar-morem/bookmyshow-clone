@@ -1,4 +1,4 @@
-import { Button } from "./button";
+import { Button } from './button'
 
 export function Navbar(): JSX.Element {
   return (
@@ -18,7 +18,7 @@ export function Navbar(): JSX.Element {
                 />
                 <span className="font-light text-sm pl-2 text-slate-700">
                   Search for Movies, Events, Plays, Sports and Activities
-                </span>{" "}
+                </span>{' '}
               </div>
             </div>
           </div>
@@ -39,5 +39,5 @@ export function Navbar(): JSX.Element {
         </div>
       </nav>
     </>
-  );
+  )
 }

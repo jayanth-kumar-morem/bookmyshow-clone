@@ -1,6 +1,6 @@
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
-import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined'
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded'
 
 export function SeatLayoutHeader() {
   return (
@@ -17,10 +17,10 @@ export function SeatLayoutHeader() {
                   Kaatera
                   <span
                     className="ml-1 text-gray-600 rounded-full border border-solid border-gray-500 text-xs w-auto object-contain"
-                    style={{ padding: "0.1rem", fontSize: "10px" }}
+                    style={{ padding: '0.1rem', fontSize: '10px' }}
                   >
-                    {" "}
-                    UA{" "}
+                    {' '}
+                    UA{' '}
                   </span>
                 </span>
               </div>
@@ -46,5 +46,5 @@ export function SeatLayoutHeader() {
         </div>
       </div>
     </div>
-  );
+  )
 }
