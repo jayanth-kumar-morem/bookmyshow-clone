@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         bmsGreen: '#2dc492',
         bmsGrayBg: '#f5f5fa',
+        bmsRed: "#f84464"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

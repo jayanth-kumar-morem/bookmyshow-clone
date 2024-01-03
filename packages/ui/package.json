@@ -17,7 +17,8 @@
     "./seatLayoutHeader": "./src/seatLayoutHeader.tsx",
     "./showTimeChooser": "./src/showTimeChooser.tsx",
     "./seatingRepresentation": "./src/seatingRepresentation.tsx",
-    "./numOfSeatsModel": "./src/numOfSeatsModel.tsx"
+    "./numOfSeatsModel": "./src/numOfSeatsModel.tsx",
+    "./termsAndConditionsModel": "./src/termsAndConditionsModel.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

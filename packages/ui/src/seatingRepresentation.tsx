@@ -12,7 +12,7 @@ const freeToBook = 3;
 function Screen() {
   return (
     <div id="screen" className="w-full">
-      <div className="wrapper flex flex-col m-auto w-full items-center pt-20 pb-10">
+      <div className="wrapper flex flex-col m-auto w-full items-center pt-20 pb-20">
         <svg className="w-2/6 h-10" style={{ verticalAlign: "middle" }}>
           <use xlinkHref={"/icons.svg#icon-screen"} />
         </svg>
@@ -208,7 +208,6 @@ export function SeatingRepresentationHelpFooter() {
     >
       <div className="wrapper flex flex-row w-full items-center justify-center">
         <div className="pr-2 flex flex-row items-center">
-          {/* Assuming Seat component takes seatType as a prop */}
           <Seat seatNo="" seatType={freeToBook} help />
         </div>
         <span className="text-xs text-gray-500 font-medium pr-8">
@@ -225,4 +224,14 @@ export function SeatingRepresentationHelpFooter() {
       </div>
     </div>
   );
+}
+
+export function PayForSelectedSelectedSeatsBtn() {
+  return (
+    <div id="pay-for-selected-seats-btn" className="w-full fixed bottom-0 bg-white py-2 shadow-[15px_15px_15px_15px_rgba(0,0,0,0.5)] opacity-100">
+      <div className="wrapper items-center" style={{textAlignLast:"center"}}> 
+        <button className="bg-bmsRed px-40 py-2 self-center text-white text-sm rounded-md">Pay Rs.224.00</button>
+      </div>
+    </div>
+  )
 }
