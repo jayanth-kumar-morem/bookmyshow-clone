@@ -13,7 +13,7 @@ export default function SeatLayout() {
       <ShowTimeChooser />
       <SeatingRepresentation />
       <SeatingRepresentationHelpFooter />
-      <NumOfSeatsModel />
+      {/* <NumOfSeatsModel /> */}
     </>
   )
 }
