@@ -4,6 +4,7 @@ import {
   SeatingRepresentation,
   SeatingRepresentationHelpFooter,
 } from '@repo/ui/seatingRepresentation'
+import { NumOfSeatsModel } from '@repo/ui/numOfSeatsModel'
 
 export default function SeatLayout() {
   return (
@@ -12,6 +13,7 @@ export default function SeatLayout() {
       <ShowTimeChooser />
       <SeatingRepresentation />
       <SeatingRepresentationHelpFooter />
+      <NumOfSeatsModel />
     </>
   )
 }

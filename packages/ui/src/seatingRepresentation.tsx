@@ -1,27 +1,27 @@
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
-import TableRow from '@mui/material/TableRow'
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
 
-const selected = 0
-const reserved = 1
-const walkway = 2
-const freeToBook = 3
+const selected = 0;
+const reserved = 1;
+const walkway = 2;
+const freeToBook = 3;
 
 function Screen() {
   return (
     <div id="screen" className="w-full">
       <div className="wrapper flex flex-col m-auto w-full items-center pt-20 pb-10">
-        <svg className="w-2/6 h-10" style={{ verticalAlign: 'middle' }}>
-          <use xlinkHref={'/icons.svg#icon-screen'} />
+        <svg className="w-2/6 h-10" style={{ verticalAlign: "middle" }}>
+          <use xlinkHref={"/icons.svg#icon-screen"} />
         </svg>
         <span className="text-xs mt-2 font-light">
           All eyes this way please!
         </span>
       </div>
     </div>
-  )
+  );
 }
 
 function Seat({
@@ -29,30 +29,30 @@ function Seat({
   seatType,
   help,
 }: {
-  seatNo: string
-  seatType: number
-  help?: boolean
+  seatNo: string;
+  seatType: number;
+  help?: boolean;
 }) {
   return (
     <button
       className={`rounded-sm 
-            ${help ? 'w-4 h-4 ' : 'w-6 h-6 '}
-            ${seatNo.length == 1 ? 'px-2 py-1 ' : 'p-1 '}
+            ${help ? "w-4 h-4 " : "w-6 h-6 "}
+            ${seatNo.length == 1 ? "px-2 py-1 " : "p-1 "}
             ${
               seatType == selected
-                ? 'bg-bmsGreen text-white border-none'
-                : 'bg-white border border-solid border-bmsGreen text-bmsGreen '
+                ? "bg-bmsGreen text-white border-none"
+                : "bg-white border border-solid border-bmsGreen text-bmsGreen "
             }
             ${
-              seatType == reserved ? 'bg-gray-200 text-white border-none ' : ' '
+              seatType == reserved ? "bg-gray-200 text-white border-none " : " "
             }
-            ${seatType == walkway ? 'border-none' : ''}
+            ${seatType == walkway ? "border-none" : ""}
         `}
-      style={{ fontSize: '10px' }}
+      style={{ fontSize: "10px" }}
     >
-      {seatType == walkway ? '' : seatNo}
+      {seatType == walkway ? "" : seatNo}
     </button>
-  )
+  );
 }
 
 function SeatsRow() {
@@ -65,28 +65,55 @@ function SeatsRow() {
     F: [2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2],
     G: [2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2],
     Z: [
-      2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-      2, 2, 2, 2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
     ],
     H: [4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4],
     I: [4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4],
     J: [4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4],
     K: [4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4],
     L: [4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4],
-  }
+  };
   return (
     <TableContainer>
       <Table
         sx={{
-          minWidth: '100%',
-          '&.MuiTableCell': {
-            padding: '0px !important',
+          minWidth: "100%",
+          "&.MuiTableCell": {
+            padding: "0px !important",
           },
         }}
       >
         <TableBody>
           {Object.keys(seatingConf).map((rowName, index) => {
-            let seatNo = 0
+            let seatNo = 0;
             return (
               <TableRow
                 key={index}
@@ -96,12 +123,12 @@ function SeatsRow() {
                   component="th"
                   scope="row"
                   style={{
-                    borderBottom: 'none',
+                    borderBottom: "none",
                   }}
                   sx={{
-                    '&.MuiTableCell-root': {
-                      padding: '5px !important',
-                      display: 'table-caption',
+                    "&.MuiTableCell-root": {
+                      padding: "5px !important",
+                      display: "table-caption",
                     },
                   }}
                   className="text-gray-400 text-xs w-5"
@@ -114,40 +141,40 @@ function SeatsRow() {
                 >
                   {seatingConf[rowName].map((seat, index) => {
                     if (seat != walkway) {
-                      seatNo++
+                      seatNo++;
                     }
                     return (
                       <TableCell
                         align="right"
                         key={index}
-                        style={{ borderBottom: 'none' }}
+                        style={{ borderBottom: "none" }}
                         sx={{
-                          '&.MuiTableCell-root': {
-                            padding: '5px !important',
-                            display: 'table-caption',
+                          "&.MuiTableCell-root": {
+                            padding: "5px !important",
+                            display: "table-caption",
                           },
                         }}
                       >
                         <Seat seatNo={String(seatNo)} seatType={seat} />
                       </TableCell>
-                    )
+                    );
                   })}
                 </div>
               </TableRow>
-            )
+            );
           })}
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
 function SectionHeader({
   sectionName,
   sectionPrice,
 }: {
-  sectionName: string
-  sectionPrice: string
+  sectionName: string;
+  sectionPrice: string;
 }) {
   return (
     <div id="seating-section-title" className="flex flex-col px-20">
@@ -156,7 +183,7 @@ function SectionHeader({
       </span>
       <hr className="text-gray-500" />
     </div>
-  )
+  );
 }
 
 export function SeatingRepresentation() {
@@ -170,7 +197,7 @@ export function SeatingRepresentation() {
         <Screen />
       </div>
     </div>
-  )
+  );
 }
 
 export function SeatingRepresentationHelpFooter() {
@@ -197,5 +224,5 @@ export function SeatingRepresentationHelpFooter() {
         <span className="text-xs text-gray-500 font-medium">Sold</span>
       </div>
     </div>
-  )
+  );
 }

@@ -4,7 +4,7 @@ import PhonelinkRingOutlinedIcon from '@mui/icons-material/PhonelinkRingOutlined
 import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined'
 import './theatresAvailabilityComponent.css'
 
-function SeatPrices() {
+export function SeatPrices() {
   return (
     <div id="seat-price-details" className="">
       <div id="wrapper" className="flex flex-col text-center px-3">

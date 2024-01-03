@@ -16,7 +16,8 @@
     "./theatresAvailabilityComponent": "./src/theatresAvailabilityComponent.tsx",
     "./seatLayoutHeader": "./src/seatLayoutHeader.tsx",
     "./showTimeChooser": "./src/showTimeChooser.tsx",
-    "./seatingRepresentation": "./src/seatingRepresentation.tsx"
+    "./seatingRepresentation": "./src/seatingRepresentation.tsx",
+    "./numOfSeatsModel": "./src/numOfSeatsModel.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
