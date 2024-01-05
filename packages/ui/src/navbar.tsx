@@ -1,15 +1,17 @@
 import { Button } from './button'
 
-export function Navbar(): JSX.Element {
+export function Navbar({showOnlyLogo}:{showOnlyLogo?:boolean}): JSX.Element {
   return (
     <>
-      <nav className="justify-between flex place-content-evenly flex-row w-full pl-8 pr-8 pt-3 pb-3 h-16 items-center">
+      <nav className="justify-between flex place-content-evenly flex-row w-full pl-8 pr-8 pt-3 pb-3 h-16 items-center"
+      style={{borderBottom: '1px solid #e5e5e5'}}
+      >
         <div className="left flex p-10">
           <div className="wrapper flex flex-row">
             <div className="logo self-center">
               <img src="/appIcon.svg" />
             </div>
-            <div className="searchbar p-1 m-2 border border-solid border-slate-300 p-2">
+            <div className={`searchbar m-2 border border-solid border-slate-300 p-2 ${showOnlyLogo && 'hidden'}`}>
               <div className="search-btn-input-box-wrapper border-grey-10 rounded-md flex flex-row items-center">
                 <img
                   aria-hidden="true"
@@ -23,7 +25,7 @@ export function Navbar(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="options flex flex-row text-xs place-content-center self-center justify-around">
+        <div className={`options flex flex-row text-xs place-content-center self-center justify-around ${showOnlyLogo && 'hidden'}`}>
           <div className="location m-auto flex flex-row pl-4">
             <div className="location">Bengaluru</div>
             <img src="/downHeadlessArrow.svg" alt="" />
