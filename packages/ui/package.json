@@ -19,7 +19,8 @@
     "./seatingRepresentation": "./src/seatingRepresentation.tsx",
     "./numOfSeatsModel": "./src/numOfSeatsModel.tsx",
     "./termsAndConditionsModel": "./src/termsAndConditionsModel.tsx",
-    "./paymentComponent": "./src/paymentComponent.tsx"
+    "./paymentComponent": "./src/paymentComponent.tsx",
+    "./locationAndLanguageChooserModal" : "./src/locationAndLanguageChooserModal.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

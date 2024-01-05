@@ -24,21 +24,21 @@ export function Carousel({ items, settings }: CarouselProps) {
 export function BannerCarousel() {
   const items: JSX.Element[] = [
     <img
-      className="m-auto rounded-lg"
-      src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704527478295_malharmelaweb.jpg"
+      className="m-auto rounded-lg object-cover w-full h-96 object-top"
+      src="https://image.tmdb.org/t/p/original/r9oTasGQofvkQY5vlUXglneF64Z.jpg"
     />,
     <img
-      className="m-auto rounded-lg"
-      src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704267698878_vasavidesk.jpg"
+      className="m-auto rounded-lg object-cover w-full h-96 object-top"
+      src='https://image.tmdb.org/t/p/original/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg'
     />,
     <img
-      className="m-auto rounded-lg"
-      src="https://assets-in.bmscdn.com/promotions/cms/creatives/1704456008868_offeroftheweekweb.jpg"
-    />,
-    <img
-      className="m-auto rounded-lg"
-      src="https://assets-in.bmscdn.com/promotions/cms/creatives/1703933140485_web.jpg"
-    />,
+    className="m-auto rounded-lg object-cover w-full h-96 object-top"
+    src="https://image.tmdb.org/t/p/original/r9oTasGQofvkQY5vlUXglneF64Z.jpg"
+  />,
+  <img
+    className="m-auto rounded-lg object-cover w-full h-96 object-top"
+      src='https://image.tmdb.org/t/p/original/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg'
+  />,
   ];
 
   const settings: Settings = {

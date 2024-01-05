@@ -1,4 +1,5 @@
 'use client'
+import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
 import { Carousel } from './carousel'
 
 export function MoviesRow() {
@@ -6,7 +7,12 @@ export function MoviesRow() {
     {
       title: 'Salaar: Cease Fire - Part 1',
       poster:
-        'https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC40LzEwICA1NjAuM0sgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00301886-adtpyusrqu-portrait.jpg',
+        'https://image.tmdb.org/t/p/original/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg',
+      genre: ['Action', 'Drama', 'Thriller'],
+    },
+    {
+      title: 'Family Man',
+      poster: "https://image.tmdb.org/t/p/original/r9oTasGQofvkQY5vlUXglneF64Z.jpg",
       genre: ['Action', 'Drama', 'Thriller'],
     },
   ]
@@ -16,7 +22,7 @@ export function MoviesRow() {
     <div className="movies-row mt-8">
       <div className="wrapper flex flex-col px-40">
         <div className="title-see-all-btn-wrapper flex flex-row place-content-between mb-2">
-          <h2 className="leading-8 font-semibold text-xl">Recommended</h2>
+          <h2 className="leading-8 font-semibold text-xl">Recommended Movies</h2>
           <button className="text-red-500 text-sm">See All &gt;</button>
         </div>
         <Carousel
@@ -41,8 +47,12 @@ export function MoviesRow() {
 function MovieCard({ movie }: { movie: any }) {
   return (
     <a className="movie-card flex flex-col pr-6" href="#">
-      <div className="poster">
-        <img className="border rounded-xl" src={movie.poster} />
+      <div className="poster flex flex-col relative justify-center">
+        <img className="rounded-xl object-cover w-60 h-96" src={movie.poster} />
+        <span className='flex flex-row bg-black text-gray-300 px-1 rounded-b-xl absolute bottom-0 w-full py-1'>
+          <StarRateRoundedIcon className='text-red-500 mr-1' fontSize='medium'/>
+          <span className=''>7.3/10 &nbsp; 560.3K Votes</span>
+        </span>
       </div>
       <div className="movie-details">
         <h3 className="font-medium text-base pt-1">{movie.title}</h3>
