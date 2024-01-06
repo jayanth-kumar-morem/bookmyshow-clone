@@ -13,7 +13,7 @@ export function MoviesRow() {
   movies = [...movies, ...movies, ...movies, ...movies, ...movies, ...movies]
   movies = [...movies, ...movies, ...movies, ...movies, ...movies, ...movies]
   return (
-    <div className="movies-row mt-14">
+    <div className="movies-row mt-8">
       <div className="wrapper flex flex-col px-40">
         <div className="title-see-all-btn-wrapper flex flex-row place-content-between mb-2">
           <h2 className="leading-8 font-semibold text-xl">Recommended</h2>

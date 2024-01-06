@@ -1,7 +1,7 @@
 export function ShowKindChooser() {
   return (
     <div
-      className="show-king-chooser py-4"
+      className="show-king-chooser py-4 border-b border-gray-200"
       style={{ backgroundColor: '#f5f5f5' }}
     >
       <div className="wrapper px-20 flex flex-row justify-between">
