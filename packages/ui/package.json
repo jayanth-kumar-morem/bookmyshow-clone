@@ -20,6 +20,7 @@
     "./numOfSeatsModel": "./src/numOfSeatsModel.tsx",
     "./termsAndConditionsModel": "./src/termsAndConditionsModel.tsx",
     "./paymentComponent": "./src/paymentComponent.tsx",
+    "./darkWrapper": "./src/darkWrapper.tsx",
     "./locationAndLanguageChooserModal" : "./src/locationAndLanguageChooserModal.tsx"
   },
   "scripts": {

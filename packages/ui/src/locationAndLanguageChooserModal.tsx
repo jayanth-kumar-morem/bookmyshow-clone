@@ -1,23 +1,21 @@
 "use client";
+import {useSetRecoilState} from 'recoil';
+import {LocaleState} from "@repo/state";
+import {CountryType, LocationInfo} from "@repo/common";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import MyLocationOutlinedIcon from "@mui/icons-material/MyLocationOutlined";
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CircularProgress from "@mui/material/CircularProgress";
 
-interface CountryType {
-  iso_3166_1: string;
-  english_name: string;
-  suggested?: boolean;
-}
-
 function CountrySelect() {
   const [countries, setCountries] = React.useState<
     readonly CountryType[] | undefined
   >();
+  const setLocaleRecoil = useSetRecoilState(LocaleState || [])
+
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -35,6 +33,11 @@ function CountrySelect() {
     })();
   }, []);
 
+  const setLocaleDetails = async (value: CountryType | null) => {
+    if (!value) return;
+    setLocaleRecoil({country_code: value.iso_3166_1, country_name: value.english_name} as LocationInfo)
+  }
+
   return (
     <Autocomplete
       id="country-select-demo"
@@ -46,6 +49,9 @@ function CountrySelect() {
       options={countries || []}
       autoHighlight
       open={open}
+      onChange={(event, value) => {
+        setLocaleDetails(value);
+      }}
       onOpen={() => {
         setOpen(true);
       }}
@@ -61,6 +67,7 @@ function CountrySelect() {
           component="li"
           sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
           {...props}
+          key={option.iso_3166_1}
         >
           <img
             loading="lazy"
@@ -105,6 +112,7 @@ function CountrySelect() {
 }
 
 export function LocationAndLanguageChooserModal() {
+  const setLocaleState = useSetRecoilState(LocaleState || []);
   
   async function setLocaleDetails() {
     const language = navigator.language;
@@ -113,12 +121,7 @@ export function LocationAndLanguageChooserModal() {
     .then((response) => {console.log({response}); return response})
     .then((data) => data.json())
     .then((data) => {
-      console.log({data});
-      
-      const country = data.country;
-      console.log({country});
-      
-      // Use the country information
+      setLocaleState(data);
     })
     .catch((error) => {
       console.error('IP geolocation error:', error);
@@ -141,7 +144,7 @@ export function LocationAndLanguageChooserModal() {
           <button
             id="detect-user-loc"
             className="border-none mt-2 flex flex-row px-2 text-sm mb-2"
-            onClick={async () => await setLocaleDetails()}
+            onClick={() => setLocaleDetails()}
           >
             <MyLocationOutlinedIcon className="text-sm text-red-500 mr-5" />
             <span className="text-red-500 ">Detect my location</span>
