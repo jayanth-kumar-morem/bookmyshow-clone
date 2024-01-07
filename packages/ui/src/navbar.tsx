@@ -1,6 +1,11 @@
 import { Button } from './button'
+import { useRecoilValue } from 'recoil'
+import { LocaleState } from '@repo/state'
 
 export function Navbar({showOnlyLogo}:{showOnlyLogo?:boolean}): JSX.Element {
+  const locale = useRecoilValue(LocaleState)
+  console.log({locale});
+  
   return (
     <>
       <nav className="justify-between flex place-content-evenly flex-row w-full pl-8 pr-8 pt-3 pb-3 h-16 items-center"
@@ -27,7 +32,7 @@ export function Navbar({showOnlyLogo}:{showOnlyLogo?:boolean}): JSX.Element {
         </div>
         <div className={`options flex flex-row text-xs place-content-center self-center justify-around ${showOnlyLogo && 'hidden'}`}>
           <div className="location m-auto flex flex-row pl-4">
-            <div className="location">Bengaluru</div>
+            <div className="location">{locale.country_name || "Bengaluru"}</div>
             <img src="/downHeadlessArrow.svg" alt="" />
           </div>
           <div className="signin-btn pl-4">
